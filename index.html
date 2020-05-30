@@ -13,7 +13,7 @@
 	<header>
 		<div>
 			<img src="img/logo.png" alt="Insurance CF">
-			<img src="img/banner.png" alt="Banner">
+			<img  id="banner" src="img/banner.png" alt="Banner">
 		</div>
 		<nav id="headernav">
 			<ul>
@@ -32,9 +32,9 @@
 		<p>Understanding your coverage options shouldn't be so hard.<br>We'll guide you through available coverage types,<br>starting with who and what is covered.</p>
 	</div>
 
-	<div id="calc">
-		<h1>Great coverage begins with a custon quote</h1>
-		<forms>
+	<div id="calculation">
+		<h1>Great coverage begins with a custom quote</h1>
+		<form>
 			<div>
 				<p>Your name:</p>
 				<input id="name">
@@ -46,7 +46,7 @@
 			<div>
 				<p>Country:</p>
 				<select id="country">
-					<option value="Austria">Austria</option>
+					<option value="Austria" selected>Austria</option>
 					<option value="Hungary">Hungary</option>
 					<option value="Greece">Greece</option>
 				</select>
@@ -55,7 +55,9 @@
 				<p>Horsepower:</p>
 				<input id="ps">
 			</div>
-		</forms>
+		</form>
+		<h2 id="calc">Calculate</h2>
+		<h2 id="result">printed calculation</h2>
 	</div>
 
 	<div id="container">
@@ -67,7 +69,7 @@
 				<li>Property Damage</li>
 				<li>Medical Payments</li>
 			</ul>
-			<p><strong>Benefits</strong><br>12-month rate guarantee | 24/7 customer service | Lifetime Repair Guarantee</p>
+			<p><strong>Benefits</strong><br><span class="gray">12-month rate guarantee | 24/7 customer service | Lifetime Repair Guarantee</span></p>
 		</div>
 		<div id="box2">
 			<h3>Add-on protection & coverage</h3>
@@ -77,7 +79,7 @@
 				<li>Towing & Labor</li>
 				<li>Rental Car Coverage</li>
 			</ul>
-			<p><strong>Earned Benefits</strong><br>Accident Forgiveness<sup>1</sup> | New Car Replacement&#8482</p>
+			<p><strong>Earned Benefits</strong><br><span class="gray">Accident Forgiveness<sup>1</sup> | New Car Replacement&#8482</span></p>
 		</div>
 	</div>
 
@@ -90,8 +92,9 @@
 			</ul>
 		</nav>
 		<img src="img/logo-inv.png" alt="Logo CF">
-		<p>Thomas Blieberger - CodeFactory 2018</p>
+		<p>Thomas Blieberger - CodeFactory 2020</p>
 	</footer>
 	
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
