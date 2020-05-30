@@ -119,19 +119,47 @@ for (var i=0; i<teamMembers.length; i++){
 	teamMembers[i].description = description[i]
 }
 
+var state1=0
+var state2=0
+var state3=0
+
 document.getElementById("emp1").onclick=function addInfo1(){
-	document.getElementById("hobby1").innerHTML="<b>Hobbys:</b> "+teamMembers[0].hobby;
-	document.getElementById("description1").innerHTML="<b>Description:</b> "+teamMembers[0].description;
+	if (state1==0){
+		document.getElementById("hobby1").innerHTML="<b>Hobbys:</b> "+teamMembers[0].hobby;
+		document.getElementById("description1").innerHTML="<b>Description:</b> "+teamMembers[0].description;
+		state1++;
+	}
+	else {
+		document.getElementById("hobby1").innerHTML="";
+		document.getElementById("description1").innerHTML=""
+		state1--;
+	}
 }
 
 document.getElementById("emp2").onclick=function addInfo2(){
-	document.getElementById("hobby2").innerHTML="<b>Hobbys:</b> "+teamMembers[1].hobby;
-	document.getElementById("description2").innerHTML="<b>Description:</b> "+teamMembers[1].description;
+	if (state2==0){
+		document.getElementById("hobby2").innerHTML="<b>Hobbys:</b> "+teamMembers[1].hobby;
+		document.getElementById("description2").innerHTML="<b>Description:</b> "+teamMembers[1].description;
+		state2++
+	}
+	else {
+		document.getElementById("hobby2").innerHTML="";
+		document.getElementById("description2").innerHTML=""
+		state2--;
+	}
 }
 
 document.getElementById("emp3").onclick=function addInfo3(){
-	document.getElementById("hobby3").innerHTML="<b>Hobbys:</b> "+teamMembers[2].hobby;
-	document.getElementById("description3").innerHTML="<b>Description:</b> "+teamMembers[2].description;
+	if (state3==0){
+		document.getElementById("hobby3").innerHTML="<b>Hobbys:</b> "+teamMembers[2].hobby;
+		document.getElementById("description3").innerHTML="<b>Description:</b> "+teamMembers[2].description;
+		state3++
+	}
+	else {
+		document.getElementById("hobby3").innerHTML="";
+		document.getElementById("description3").innerHTML=""
+		state3--;
+	}
 }
 
 	</script>
