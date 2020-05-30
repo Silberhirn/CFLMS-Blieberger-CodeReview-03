@@ -118,21 +118,20 @@ for (var i=0; i<teamMembers.length; i++){
 	teamMembers[i].hobby = hobby[i]
 	teamMembers[i].description = description[i]
 }
-console.log(teamMembers[0].hobby)
 
 document.getElementById("emp1").onclick=function addInfo1(){
 	document.getElementById("hobby1").innerHTML="<b>Hobbys:</b> "+teamMembers[0].hobby;
-	document.getElementById("description1").innerHTML="<bDescription:</b> "+teamMembers[0].description;
+	document.getElementById("description1").innerHTML="<b>Description:</b> "+teamMembers[0].description;
 }
 
-document.getElementById("emp2").onclick=function addInfo2(teamMembers){
+document.getElementById("emp2").onclick=function addInfo2(){
 	document.getElementById("hobby2").innerHTML="<b>Hobbys:</b> "+teamMembers[1].hobby;
-	document.getElementById("description2").innerHTML="<bDescription:</b> "+teamMembers[1].description;
+	document.getElementById("description2").innerHTML="<b>Description:</b> "+teamMembers[1].description;
 }
 
-document.getElementById("emp3").onclick=function addInfo3(teamMembers){
+document.getElementById("emp3").onclick=function addInfo3(){
 	document.getElementById("hobby3").innerHTML="<b>Hobbys:</b> "+teamMembers[2].hobby;
-	document.getElementById("description3").innerHTML="<bDescription:</b> "+teamMembers[2].description;
+	document.getElementById("description3").innerHTML="<b>Description:</b> "+teamMembers[2].description;
 }
 
 	</script>
