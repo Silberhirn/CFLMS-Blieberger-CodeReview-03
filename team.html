@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>index</title>
+<link rel="stylesheet" type="text/css" href="CSS/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap" rel="stylesheet">
+<style>
+	#base {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	#base>div {
+		margin-left: 2em;
+		margin-right: 2em;
+		padding: 1em;
+		display: flex;
+		overflow: hidden;
+		width: 40%;
+	}
+	[id*="emp"] {
+		width: 50%;
+		height: 15em;
+		overflow: hidden;
+	}
+	[id*="emp"] img {
+		width: 100%;
+	}
+	h1 {
+		margin: 1em;
+	}
+	.descr {
+		padding: 1em;
+	}
+</style>
+</head>
+
+<body>
+
+	<header>
+		<div>
+			<img src="img/logo.png" alt="Insurance CF">
+			<img  id="banner" src="img/banner.png" alt="Banner">
+		</div>
+		<nav id="headernav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li>Team</li>
+			</ul>
+		</nav>
+	</header>
+
+	<h1>Team</h1>
+
+	<div id="base">
+		<div>
+			<div id="emp1"></div>
+			<div class="descr">
+				<p id="name1"></p>
+				<p id="email1"></p>
+				<p id="text1"></p>
+				<p id="hobby1"></p>
+				<p id="description1"></p>
+
+			</div>
+		</div>
+
+		<div>
+			<div id="emp2"></div>
+			<div class="descr">
+				<p id="name2"></p>
+				<p id="email2"></p>
+				<p id="text2"></p>
+				<p id="hobby2"></p>
+				<p id="description2"></p>
+			</div>
+		</div>
+
+		<div>
+			<div id="emp3"></div>
+			<div class="descr">
+				<p id="name3"></p>
+				<p id="email3"></p>
+				<p id="text3"></p>
+				<p id="hobby3"></p>
+				<p id="description3"></p>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<nav id="footernav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li>Team</li>
+			</ul>
+		</nav>
+		<img src="img/logo-inv.png" alt="Logo CF">
+		<p>Thomas Blieberger - CodeFactory 2020</p>
+	</footer>
+	
+	<script>
+	
+var teamMembers = [{name:"Fran", email:"fran@index.com",image:"img/per1.jpeg"},{name:"Bill",email:"bill@index.com",image:"img/per2.jpeg"},{name:"Anna", email:"anna@index.com",image:"img/per3.jpeg"}];
+
+for (var i=0; i<teamMembers.length; i++) {
+	document.getElementById("name"+(i+1)).innerHTML="<b>Name:</b> "+teamMembers[i].name;
+	document.getElementById("email"+(i+1)).innerHTML="<b>E-Mail:</b> "+teamMembers[i].email;
+	document.getElementById("emp"+(i+1)).innerHTML+="<img src='"+teamMembers[i].image+"'>";
+}	
+
+var hobby = ["sailing, climbing, hiking", "gaming, movies", "dating, food"]
+var description = ["textperson1 textperson1 textperson1 textperson1 textperson1 textperson1 textperson1 textperson1 textperson1 textperson1 textperson1 textperson1 textperson1 textperson1 textperson1 textperson1 textperson1 textperson1 textperson1 textperson1 textperson1 textperson1 ", "textperson2 textperson2 textperson2 textperson2 textperson2 textperson2 textperson2 textperson2 textperson2 textperson2 textperson2 textperson2 textperson2 ", "textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 textperson3 "]
+
+for (var i=0; i<teamMembers.length; i++){
+	teamMembers[i].hobby = hobby[i]
+	teamMembers[i].description = description[i]
+}
+console.log(teamMembers[0].hobby)
+
+document.getElementById("emp1").onclick=function addInfo1(){
+	document.getElementById("hobby1").innerHTML="<b>Hobbys:</b> "+teamMembers[0].hobby;
+	document.getElementById("description1").innerHTML="<bDescription:</b> "+teamMembers[0].description;
+}
+
+document.getElementById("emp2").onclick=function addInfo2(teamMembers){
+	document.getElementById("hobby2").innerHTML="<b>Hobbys:</b> "+teamMembers[1].hobby;
+	document.getElementById("description2").innerHTML="<bDescription:</b> "+teamMembers[1].description;
+}
+
+document.getElementById("emp3").onclick=function addInfo3(teamMembers){
+	document.getElementById("hobby3").innerHTML="<b>Hobbys:</b> "+teamMembers[2].hobby;
+	document.getElementById("description3").innerHTML="<bDescription:</b> "+teamMembers[2].description;
+}
+
+	</script>
+</body>
+</html>
